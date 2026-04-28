@@ -1,0 +1,21 @@
+---
+description: Push the Mother’s Day site live to Firebase Hosting — agent runs deploy from repo root
+alwaysApply: true
+---
+
+# Push live (Firebase Hosting)
+
+When the user asks to **push live**, **deploy**, **go live**, **publish**, or ship the static site:
+
+1. **Working directory:** project root of this repo (the folder that contains `package.json`, `firebase.json`, and `index.html`).
+2. **Run production deploy yourself** (do not only give the user instructions):
+
+   ```bash
+   npm run deploy
+   ```
+
+   This runs `npx firebase-tools deploy --non-interactive --config firebase.json`.
+
+3. If deploy fails with auth errors, say that Firebase CLI must be logged in once on that machine: `npx firebase-tools login`.
+
+**Preview (not production):** `npm run deploy:preview` — temporary Hosting channel, 7-day expiry.
