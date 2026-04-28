@@ -1,0 +1,9 @@
+{
+  "name": "mothers-day-landing",
+  "private": true,
+  "description": "Mother’s Day RSVP static site — deploy from this folder",
+  "scripts": {
+    "deploy": "npx firebase-tools deploy --non-interactive --config firebase.json",
+    "deploy:preview": "npx firebase-tools hosting:channel:deploy md-edit --expires 7d --non-interactive --config firebase.json"
+  }
+}

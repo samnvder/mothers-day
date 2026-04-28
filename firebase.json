@@ -1,0 +1,28 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md",
+      "package.json",
+      "package-lock.json",
+      "south_end_mothers_day_rsvp_cursor_brief.md",
+      "Mothers Day HTML.html",
+      "firebase-debug.log",
+      "**/firebase-debug.log"
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300, s-maxage=600"
+          }
+        ]
+      }
+    ]
+  }
+}

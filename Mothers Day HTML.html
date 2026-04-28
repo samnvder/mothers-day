@@ -1,0 +1,902 @@
+<!--
+  Thrive / WordPress embed fragment. Full-page site: index.html in this folder — npm run deploy
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+<title>Mother’s Day at South End | RSVP</title>
+<meta name="description" content="Reserve your table for Mother’s Day at South End. Enjoy premium entrees, kids options, sides, desserts, included drinks, and optional bottomless mimosas.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#0b468c">
+<link rel="canonical" href="https://southendclub.com/mothers-day/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://southendclub.com/mothers-day/">
+<meta property="og:title" content="Mother’s Day at South End | RSVP">
+<meta property="og:description" content="Reserve your table for Mother’s Day at South End. Premium brunch buffet, kids menu, included beverages, optional bottomless mimosas.">
+<meta property="og:image" content="https://southendclub.com/wp-content/uploads/2025/11/jaylin-brooks-previews-78-1024x682.jpg">
+<meta property="og:site_name" content="South End Racquet &amp; Health Club">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://southendclub.com/mothers-day/">
+<meta name="twitter:title" content="Mother’s Day at South End | RSVP">
+<meta name="twitter:description" content="Reserve your table for Mother’s Day at South End. Premium brunch buffet, included drinks, optional bottomless mimosas.">
+<meta name="twitter:image" content="https://southendclub.com/wp-content/uploads/2025/11/jaylin-brooks-previews-78-1024x682.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   MOTHER'S DAY RSVP LANDING — SOUTH END DESIGN SYSTEM
+   Scoped under .mothers-day (embed-safe)
+========================================================= */
+
+:root {
+  --md-bg-primary: #f8f2e1;
+  --md-bg-secondary: #f0e9d8;
+  --md-bg-card: rgba(255, 255, 255, 0.92);
+  --md-text-primary: #204147;
+  --md-text-secondary: #3d5a5e;
+  --md-accent-blue: #0b468c;
+  --md-accent-teal: #204147;
+  --md-accent-teal-bright: #2d6b73;
+  --md-accent-burgundy: #c8353a;
+  --md-white: #ffffff;
+  --md-shadow-soft: 0 4px 30px rgba(11, 70, 140, 0.08);
+  --md-shadow-medium: 0 8px 40px rgba(11, 70, 140, 0.12);
+  --md-radius-sm: 12px;
+  --md-radius-md: 20px;
+  --md-radius-lg: 32px;
+  --md-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mothers-day *,
+.mothers-day *::before,
+.mothers-day *::after {
+  box-sizing: border-box;
+}
+
+.mothers-day .no-break {
+  white-space: nowrap;
+}
+
+.mothers-day {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--md-bg-primary);
+  color: var(--md-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.mothers-day .md-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 1.5rem);
+}
+
+/* ----- Hero ----- */
+.mothers-day .md-hero {
+  position: relative;
+  /* Shorter hero so the menu appears soon after “above the fold” */
+  min-height: clamp(340px, 52vh, 560px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mothers-day .md-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.08);
+  transition: transform 8s ease-out;
+}
+
+.mothers-day .md-hero:hover .md-hero-bg {
+  transform: scale(1.02);
+}
+
+.mothers-day .md-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 242, 225, 0.9) 0%,
+    rgba(248, 242, 225, 0.72) 28%,
+    rgba(11, 70, 140, 0.58) 62%,
+    rgba(32, 65, 71, 0.82) 100%
+  );
+}
+
+.mothers-day .md-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1rem, 4vw, 1.5rem) clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.mothers-day .md-hero-logo {
+  width: min(280px, 78vw);
+  margin-bottom: 1.5rem;
+}
+
+.mothers-day .md-hero-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.28));
+}
+
+.mothers-day .md-hero-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.mothers-day .md-hero-titles h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.mothers-day .md-hero-titles .md-title-line {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.85rem, 5.2vw, 3.1rem);
+  font-weight: 800;
+  color: var(--md-accent-blue);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.12);
+}
+
+.mothers-day .md-hero-titles .md-title-line.accent {
+  font-size: clamp(1.55rem, 4.2vw, 2.65rem);
+  color: var(--md-white);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+  margin-top: 0.2rem;
+}
+
+.mothers-day .md-hero-sub-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: min(98%, 40rem);
+  margin-bottom: 1.25rem;
+}
+
+.mothers-day .md-hero-sub {
+  font-size: clamp(0.95rem, 2.8vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--md-white);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 2px 18px rgba(0, 0, 0, 0.4);
+}
+
+.mothers-day .md-hero-sub > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.mothers-day .md-hero-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: min(98%, 36rem);
+  margin-bottom: 1.75rem;
+  padding: clamp(0.75rem, 2.5vw, 1.1rem) clamp(2rem, 5vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.78rem, 2.2vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-white);
+  line-height: 1.5;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.mothers-day .md-hero-meta span {
+  display: block;
+  text-align: center;
+}
+
+.mothers-day .md-hero-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.mothers-day .md-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: clamp(0.85rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.25rem);
+  min-height: 48px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+  transition: transform var(--md-transition), box-shadow var(--md-transition), background var(--md-transition);
+}
+
+.mothers-day .md-btn-primary {
+  background: linear-gradient(135deg, var(--md-accent-blue), var(--md-accent-teal-bright));
+  color: var(--md-white);
+  box-shadow:
+    0 6px 28px rgba(11, 70, 140, 0.38),
+    0 0 18px rgba(11, 70, 140, 0.18);
+}
+
+.mothers-day .md-btn-primary:hover {
+  background: linear-gradient(135deg, var(--md-accent-teal), var(--md-accent-teal-bright));
+  transform: translateY(-3px);
+}
+
+.mothers-day .md-btn svg {
+  flex-shrink: 0;
+}
+
+.mothers-day .md-scroll-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(248, 242, 225, 0.75);
+}
+
+.mothers-day .md-scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(248, 242, 225, 0.55), transparent);
+}
+
+/* ----- Sections ----- */
+.mothers-day .md-section {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+/* Menu immediately follows hero — less top padding */
+.mothers-day #menu.md-section {
+  padding-top: clamp(1rem, 3vw, 1.75rem);
+}
+
+.mothers-day .md-section.alt {
+  background: var(--md-bg-secondary);
+}
+
+.mothers-day .md-section-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.mothers-day .md-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--md-accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+.mothers-day .md-kicker::before,
+.mothers-day .md-kicker::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--md-accent-blue));
+}
+
+.mothers-day .md-kicker::after {
+  background: linear-gradient(90deg, var(--md-accent-blue), transparent);
+}
+
+.mothers-day .md-h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  font-weight: 800;
+  color: var(--md-text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  max-width: 22ch;
+}
+
+.mothers-day .md-lede {
+  margin-top: 1rem;
+  max-width: min(52rem, 100%);
+  font-size: 1.05rem;
+  color: var(--md-text-secondary);
+  line-height: 1.65;
+}
+
+/* ----- Details ----- */
+.mothers-day .md-detail-grid {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .mothers-day .md-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mothers-day .md-detail-card {
+  background: var(--md-bg-card);
+  border-radius: var(--md-radius-md);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--md-shadow-soft);
+  border: 1px solid rgba(11, 70, 140, 0.08);
+}
+
+.mothers-day .md-detail-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--md-accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.mothers-day .md-detail-card p {
+  font-size: 0.98rem;
+  color: var(--md-text-secondary);
+}
+
+.mothers-day .md-detail-card ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--md-text-secondary);
+  font-size: 0.98rem;
+}
+
+.mothers-day .md-detail-card li + li {
+  margin-top: 0.35rem;
+}
+
+/* ----- Pricing ----- */
+.mothers-day .md-price-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .mothers-day .md-price-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mothers-day .md-price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--md-bg-card);
+  border-radius: var(--md-radius-md);
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: var(--md-shadow-medium);
+  border: 1px solid rgba(11, 70, 140, 0.1);
+  transition: transform var(--md-transition);
+}
+
+.mothers-day .md-price-card:hover {
+  transform: translateY(-4px);
+}
+
+.mothers-day .md-price-amount {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  font-weight: 800;
+  color: var(--md-accent-blue);
+  margin-bottom: 0.6rem;
+}
+
+.mothers-day .md-price-card p {
+  font-size: 0.95rem;
+  color: var(--md-text-secondary);
+  line-height: 1.6;
+}
+
+.mothers-day .md-policy-strip {
+  margin-top: 2rem;
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: 1rem 1.25rem;
+  border-radius: var(--md-radius-sm);
+  border-left: 4px solid var(--md-accent-burgundy);
+  background: rgba(200, 53, 58, 0.06);
+  font-weight: 600;
+  color: var(--md-text-primary);
+  text-align: center;
+}
+
+/* ----- Menu ----- */
+.mothers-day .md-menu-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mothers-day .md-menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mothers-day .md-menu-block {
+  background: var(--md-bg-card);
+  border-radius: var(--md-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--md-shadow-soft);
+  border: 1px solid rgba(11, 70, 140, 0.08);
+}
+
+.mothers-day .md-menu-block h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--md-accent-teal);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(11, 70, 140, 0.12);
+}
+
+.mothers-day .md-menu-block ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--md-text-secondary);
+}
+
+.mothers-day .md-menu-block li + li {
+  margin-top: 0.4rem;
+}
+
+/* ----- Drinks ----- */
+.mothers-day .md-drinks-split {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .mothers-day .md-drinks-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mothers-day .md-drink-panel {
+  background: var(--md-bg-card);
+  border-radius: var(--md-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--md-shadow-soft);
+  border: 1px solid rgba(11, 70, 140, 0.08);
+}
+
+.mothers-day .md-drink-panel h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--md-accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+.mothers-day .md-drink-panel ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--md-text-secondary);
+  font-size: 0.98rem;
+}
+
+.mothers-day .md-drink-panel li + li {
+  margin-top: 0.35rem;
+}
+
+.mothers-day .md-drink-note {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--md-text-secondary);
+  text-align: center;
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+/* ----- Reservation ----- */
+.mothers-day .md-policy-box {
+  max-width: 52rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+  border-radius: var(--md-radius-md);
+  background: var(--md-bg-card);
+  border: 2px solid rgba(11, 70, 140, 0.15);
+  box-shadow: var(--md-shadow-soft);
+}
+
+.mothers-day .md-policy-box p {
+  color: var(--md-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.mothers-day .md-policy-box p:last-child {
+  margin-bottom: 0;
+}
+
+.mothers-day .md-policy-strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--md-text-primary);
+  padding: 1rem;
+  border-radius: var(--md-radius-sm);
+  background: rgba(11, 70, 140, 0.06);
+  border: 1px solid rgba(11, 70, 140, 0.12);
+}
+
+/* ----- RSVP ----- */
+.mothers-day .md-rsvp-panel {
+  max-width: 56rem;
+  margin-inline: auto;
+  background: var(--md-bg-card);
+  border-radius: var(--md-radius-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--md-shadow-medium);
+  border: 1px solid rgba(11, 70, 140, 0.1);
+}
+
+.mothers-day .md-rsvp-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 2rem;
+  border-radius: var(--md-radius-md);
+  border: 2px dashed rgba(11, 70, 140, 0.25);
+  background: rgba(248, 242, 225, 0.5);
+  text-align: center;
+}
+
+.mothers-day .md-rsvp-placeholder p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--md-accent-blue);
+}
+
+.mothers-day .md-rsvp-placeholder small {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--md-text-secondary);
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+/* ----- Footer note ----- */
+.mothers-day .md-footer-note {
+  padding: clamp(2.5rem, 6vw, 3.5rem) 0;
+  text-align: center;
+  background: var(--md-bg-secondary);
+}
+
+.mothers-day .md-footer-note p {
+  color: var(--md-text-secondary);
+  font-size: 0.98rem;
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.mothers-day .md-footer-note a {
+  color: var(--md-accent-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mothers-day .md-footer-note a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Mother’s Day at South End",
+  "description": "Mother’s Day buffet-style dining at South End Club in Torrance, CA. RSVP required. One seating 11 AM–3 PM.",
+  "startDate": "2026-05-10T11:00:00-07:00",
+  "endDate": "2026-05-10T15:00:00-07:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "image": "https://southendclub.com/wp-content/uploads/2025/11/jaylin-brooks-previews-78-1024x682.jpg",
+  "location": {
+    "@type": "Place",
+    "name": "South End Racquet & Health Club",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Torrance",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  },  
+  "organizer": {
+    "@type": "Organization",
+    "name": "South End Racquet & Health Club",
+    "url": "https://southendclub.com/"
+  }
+}
+</script>
+
+<div class="sec-page mothers-day">
+
+  <header class="md-hero">
+    <!-- HERO IMAGE: Replace the URL in background-image below when your new asset is uploaded to the server. -->
+    <div class="md-hero-bg" style="background-image: url('https://southendclub.com/wp-content/uploads/2021/09/banquets-by-south-end-club_lounge-2-1.jpg');" aria-hidden="true"></div>
+    <div class="md-hero-overlay" aria-hidden="true"></div>
+    <div class="md-hero-inner">
+      <div class="md-hero-logo">
+        <img src="https://southendclub.com/wp-content/uploads/2025/11/Original-Logo.svg" width="280" height="80" alt="South End Club" decoding="async">
+      </div>
+      <div class="md-hero-titles">
+        <h1>
+          <span class="md-title-line">Mother’s Day</span>
+          <span class="md-title-line accent">at <span class="no-break">South End</span></span>
+        </h1>
+      </div>
+      <div class="md-hero-sub-wrap">
+        <p class="md-hero-sub">
+          <span>Celebrate Your Favorite Person’s Day at <span class="no-break">The Lounge!</span></span>
+        </p>
+      </div>
+      <p class="md-hero-meta">
+        <span>Sunday, Mother’s Day · 11 AM–3 PM</span>
+        <span>One seating only</span>
+      </p>
+      <div class="md-hero-cta-wrap">
+        <a href="#rsvp" class="md-btn md-btn-primary">
+          <span>Reserve Your Table</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="md-scroll-hint" aria-hidden="true">
+      <span>Menu below</span>
+      <div class="md-scroll-line"></div>
+    </div>
+  </header>
+
+  <section class="md-section" id="menu" aria-labelledby="md-menu-heading">
+    <div class="md-container">
+      <div class="md-section-head">
+        <p class="md-kicker">Menu</p>
+        <h2 id="md-menu-heading" class="md-h2">What we’re serving</h2>
+        <p class="md-lede">Enjoy a full spread with premium entrées, kid-friendly options, sides, desserts, and included beverages.</p>
+      </div>
+      <div class="md-menu-grid">
+        <div class="md-menu-block">
+          <h3>Entrées</h3>
+          <ul>
+            <li>Oven roast rib eye with carving person</li>
+            <li>Grilled salmon</li>
+            <li>Pork BBQ ribs</li>
+            <li>Grilled chicken breast</li>
+            <li>Scampi shrimp</li>
+          </ul>
+        </div>
+        <div class="md-menu-block">
+          <h3>Kids entrées</h3>
+          <ul>
+            <li>Chicken tenders</li>
+            <li>Cheese pizza</li>
+            <li>Pepperoni pizza</li>
+          </ul>
+        </div>
+        <div class="md-menu-block">
+          <h3>Sides</h3>
+          <ul>
+            <li>Mashed potatoes</li>
+            <li>French fries</li>
+            <li>Dinner rolls</li>
+            <li>Roasted corn</li>
+            <li>Oven roasted vegetables</li>
+            <li>Salad station</li>
+          </ul>
+        </div>
+        <div class="md-menu-block">
+          <h3>Dessert</h3>
+          <ul>
+            <li>Cheesecake bites</li>
+            <li>Brownie bites</li>
+            <li>Cookies</li>
+            <li>Fruit platter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="md-section alt" id="event-details" aria-labelledby="md-details-heading">
+    <div class="md-container">
+      <div class="md-section-head">
+        <p class="md-kicker">Event</p>
+        <h2 id="md-details-heading" class="md-h2">Mother’s Day details</h2>
+        <p class="md-lede">Members may bring nonmembers. Table assignments are based on reservation timing. All RSVPs are paid in advance through our secure RSVP form.</p>
+      </div>
+      <div class="md-detail-grid">
+        <div class="md-detail-card">
+          <h3>When</h3>
+          <p><strong>11:00 AM – 3:00 PM</strong> · one brunch seating.</p>
+        </div>
+        <div class="md-detail-card">
+          <h3>Guest policy</h3>
+          <p>Members are welcome to bring nonmember guests.</p>
+        </div>
+        <div class="md-detail-card">
+          <h3>Decor &amp; atmosphere</h3>
+          <p>Flower decorations and table bouquets — plan for a festive, elevated club setting.</p>
+        </div>
+        <div class="md-detail-card">
+          <h3>Patio note</h3>
+          <p>Patio reservations require <span class="no-break">8+ guests</span>. Patio seating is not guaranteed unless confirmed by <span class="no-break">South End</span>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="md-section" id="pricing" aria-labelledby="md-pricing-heading">
+    <div class="md-container">
+      <div class="md-section-head">
+        <p class="md-kicker">Pricing</p>
+        <h2 id="md-pricing-heading" class="md-h2">Mother’s Day pricing</h2>
+      </div>
+      <div class="md-price-grid">
+        <div class="md-price-card">
+          <p class="md-price-amount">$105 per adult</p>
+          <p>Includes the Mother’s Day dining experience, soda, lemonade, fresh squeezed orange juice, and one comped house wine (Angeline Cabernet or Angeline Chardonnay) <strong>or</strong> one bottled beer.</p>
+        </div>
+        <div class="md-price-card">
+          <p class="md-price-amount">$40 per child</p>
+          <p>Kids <strong>ages 2–12</strong>: includes kids entrée choices, sides, desserts, and included non-alcoholic beverages. Kids under 2 may be included at no charge when noted on the RSVP.</p>
+        </div>
+        <div class="md-price-card">
+          <p class="md-price-amount">+$25 per person</p>
+          <p>Optional <strong>bottomless mimosas</strong> add-on, selected during RSVP. House margaritas ($10) and Mother’s Day cocktails (TBD) will also be available at the event.</p>
+        </div>
+      </div>
+      <p class="md-policy-strip" role="note">All RSVPs are non-refundable.</p>
+    </div>
+  </section>
+
+  <section class="md-section alt" id="drinks" aria-labelledby="md-drinks-heading">
+    <div class="md-container">
+      <div class="md-section-head">
+        <p class="md-kicker">Drinks</p>
+        <h2 id="md-drinks-heading" class="md-h2">Beverages &amp; add-ons</h2>
+      </div>
+      <div class="md-drinks-split">
+        <div class="md-drink-panel">
+          <h3>Included</h3>
+          <ul>
+            <li>Fresh squeezed orange juice</li>
+            <li>Soda</li>
+            <li>Lemonade</li>
+            <li>One comped house wine — Angeline Cabernet or Angeline Chardonnay — <strong>or</strong> one bottled beer</li>
+          </ul>
+        </div>
+        <div class="md-drink-panel">
+          <h3>Available at the event / add-ons</h3>
+          <ul>
+            <li>Bottomless mimosas: +$25 per person (RSVP add-on)</li>
+            <li>House margaritas: $10</li>
+            <li>Two Mother’s Day cocktails: details TBD</li>
+          </ul>
+        </div>
+      </div>
+      <p class="md-drink-note">Final payment and itemized totals are handled securely in the RSVP form. The website shows menu and policy information only.</p>
+    </div>
+  </section>
+
+  <section class="md-section" id="reservations" aria-labelledby="md-res-heading">
+    <div class="md-container">
+      <div class="md-section-head">
+        <p class="md-kicker">Policies</p>
+        <h2 id="md-res-heading" class="md-h2">Reservation details</h2>
+      </div>
+      <div class="md-policy-box">
+        <p>Members may bring nonmembers. Table reservations are based on speed of reservation. Patio reservations require 8+ guests and are not guaranteed unless confirmed by South End.</p>
+        <p class="md-policy-strong">All RSVPs are non-refundable. Please confirm your party size and add-ons before submitting payment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="md-section alt" id="rsvp" aria-labelledby="md-rsvp-heading">
+    <div class="md-container">
+      <div class="md-section-head">
+        <p class="md-kicker">RSVP</p>
+        <h2 id="md-rsvp-heading" class="md-h2">Reserve &amp; pay</h2>
+        <p class="md-lede">Complete your party details and submit payment in the form below. You’ll receive a confirmation from our RSVP system after checkout.</p>
+      </div>
+
+      <!--
+        TALLY EMBED: Replace the entire <div class="md-rsvp-placeholder rsvp-embed-placeholder">…</div> block
+        with the official Tally iframe + embed.js snippet from `south_end_mothers_day_rsvp_cursor_brief.md` (this folder)
+        when the live form ID is ready. Keep the surrounding .md-rsvp-panel for consistent styling.
+      -->
+      <div class="md-rsvp-panel">
+        <div class="md-rsvp-placeholder rsvp-embed-placeholder">
+          <p>RSVP form coming soon.</p>
+          <small>Payment amounts, Stripe checkout, and confirmation emails are configured in Tally — not on this page.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="md-footer-note">
+    <div class="md-container">
+      <p>Questions? Email <a href="mailto:lounge@southendclub.com">lounge@southendclub.com</a> or call <a href="tel:+13105300630">310-530-0630</a>.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var root = document.querySelector('.mothers-day');
+  if (!root) return;
+  root.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var href = anchor.getAttribute('href');
+      if (!href || href.length < 2) return;
+      var target = document.getElementById(href.slice(1));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
