@@ -7,7 +7,7 @@
   <!--
     Last-call RSVP — layout aligned with live RSVP page (south-end-mother-s-day-rsvp.web.app):
     paper/surface/ink palette, editorial display type, dark CTA strip, warn-style member notice.
-    Includes buffet offering + pricing (aligned with pitch email / live RSVP page); RSVP CTA in hero and bottom.
+    CTAs use VML roundrect for Outlook (Windows) + padded &lt;a&gt; for other clients.
   -->
   <style type="text/css">
     .md-email-wrap { padding: 24px 16px !important; }
@@ -38,10 +38,22 @@
                   <td style="font-family:Georgia,'Cormorant Garamond','Times New Roman',serif; font-size:17px; font-weight:600; letter-spacing:0.02em; color:#1a1816;">
                     Mother’s Day at South End
                   </td>
-                  <td align="right" style="white-space:nowrap;">
-                    <a href="https://south-end-mother-s-day-rsvp.web.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:10px 14px; font-family:'Segoe UI','Source Sans 3',Roboto,Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; color:#ffffff; background-color:#2c2420; border-radius:2px;">
-                      RSVP now
-                    </a>
+                  <td align="right" valign="middle" style="white-space:nowrap;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right">
+                      <tr>
+                        <td align="center" bgcolor="#2c2420" style="background-color:#2c2420; border-radius:4px;">
+                          <!--[if mso]>
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://south-end-mother-s-day-rsvp.web.app/" style="height:44px;v-text-anchor:middle;width:132px;" arcsize="16%" stroke="f" fillcolor="#2c2420">
+                          <w:anchorlock/>
+                          <center style="color:#ffffff;font-family:Segoe UI,Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:0.08em;text-transform:uppercase;">RSVP NOW</center>
+                          </v:roundrect>
+                          <![endif]-->
+                          <!--[if !mso]><!-->
+                          <a href="https://south-end-mother-s-day-rsvp.web.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:14px 22px; font-family:'Segoe UI','Source Sans 3',Roboto,Helvetica,Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; text-decoration:none; color:#ffffff; background-color:#2c2420; border-radius:4px; line-height:1.2;">RSVP now</a>
+                          <!--<![endif]-->
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
@@ -89,13 +101,25 @@
                   </td>
                 </tr>
               </table>
-              <!-- Primary CTA: white button on dark (.md-btn-primary) -->
-              <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin-top:26px;">
+              <!-- Primary CTA: bulletproof white button (Outlook VML + padded fallback) -->
+              <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin-top:28px;">
                 <tr>
-                  <td align="center" bgcolor="#ffffff" style="background-color:#ffffff; border-radius:2px; box-shadow:0 2px 16px rgba(0,0,0,0.2);">
-                    <a href="https://south-end-mother-s-day-rsvp.web.app/" target="_blank" rel="noopener noreferrer" style="font-family:'Segoe UI','Source Sans 3',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#2c2420; text-decoration:none; display:inline-block; padding:16px 28px; border-radius:2px;">
-                      RSVP before we fill up
-                    </a>
+                  <td align="center">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td align="center" bgcolor="#ffffff" style="background-color:#ffffff; border-radius:4px; border:2px solid #f0ebe6; box-shadow:0 3px 18px rgba(0,0,0,0.22);">
+                          <!--[if mso]>
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://south-end-mother-s-day-rsvp.web.app/" style="height:56px;v-text-anchor:middle;width:340px;" arcsize="10%" stroke="f" fillcolor="#ffffff">
+                          <w:anchorlock/>
+                          <center style="color:#2c2420;font-family:Segoe UI,Arial,sans-serif;font-size:16px;font-weight:bold;letter-spacing:0.06em;text-transform:uppercase;">RSVP BEFORE WE FILL UP</center>
+                          </v:roundrect>
+                          <![endif]-->
+                          <!--[if !mso]><!-->
+                          <a href="https://south-end-mother-s-day-rsvp.web.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:20px 44px; font-family:'Segoe UI','Source Sans 3',Roboto,Helvetica,Arial,sans-serif; font-size:16px; font-weight:700; letter-spacing:0.055em; text-transform:uppercase; color:#2c2420; text-decoration:none; line-height:1.25; border-radius:4px;">RSVP before we fill up</a>
+                          <!--<![endif]-->
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
@@ -240,15 +264,27 @@
             </td>
           </tr>
 
-          <!-- Bottom RSVP CTA -->
+          <!-- Bottom RSVP CTA — bulletproof dark button for Outlook -->
           <tr>
-            <td align="center" class="md-pad" style="padding:24px 28px 8px 28px; background-color:#f6f4f1;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <td align="center" class="md-pad" style="padding:28px 24px 10px 24px; background-color:#f6f4f1;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="width:100%; max-width:360px;">
                 <tr>
-                  <td align="center" bgcolor="#2c2420" style="background-color:#2c2420; border-radius:2px; box-shadow:0 2px 12px rgba(26,24,22,0.12);">
-                    <a href="https://south-end-mother-s-day-rsvp.web.app/" target="_blank" rel="noopener noreferrer" style="font-family:'Segoe UI','Source Sans 3',Roboto,Helvetica,Arial,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#ffffff; text-decoration:none; display:inline-block; padding:16px 36px; border-radius:2px;">
-                      RSVP before we fill up
-                    </a>
+                  <td align="center">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%; max-width:340px;">
+                      <tr>
+                        <td align="center" bgcolor="#2c2420" style="background-color:#2c2420; border-radius:4px; border:2px solid #1a1513;">
+                          <!--[if mso]>
+                          <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://south-end-mother-s-day-rsvp.web.app/" style="height:56px;v-text-anchor:middle;width:328px;" arcsize="10%" strokecolor="#1a1513" fillcolor="#2c2420">
+                          <w:anchorlock/>
+                          <center style="color:#ffffff;font-family:Segoe UI,Arial,sans-serif;font-size:16px;font-weight:bold;letter-spacing:0.06em;text-transform:uppercase;">RSVP BEFORE WE FILL UP</center>
+                          </v:roundrect>
+                          <![endif]-->
+                          <!--[if !mso]><!-->
+                          <a href="https://south-end-mother-s-day-rsvp.web.app/" target="_blank" rel="noopener noreferrer" style="display:block; padding:20px 36px; font-family:'Segoe UI','Source Sans 3',Roboto,Helvetica,Arial,sans-serif; font-size:16px; font-weight:700; letter-spacing:0.055em; text-transform:uppercase; color:#ffffff; text-decoration:none; line-height:1.25; text-align:center; border-radius:4px;">RSVP before we fill up</a>
+                          <!--<![endif]-->
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
